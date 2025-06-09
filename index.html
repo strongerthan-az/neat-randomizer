@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEAT Randomizer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #fce4ec);
+      color: #333;
+      text-align: center;
+      padding: 30px 15px;
+    }
+    h1 {
+      color: #00796b;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 1.1em;
+      color: #555;
+    }
+    .filters {
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    select, button {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #00796b;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: 600;
+      background: #ffffffcc;
+      border-radius: 12px;
+      padding: 20px;
+      width: 80%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    #xpCounter {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎲 NEAT Randomizer</h1>
+  <p>Discover fun, non-exercise activities to move more & feel better.</p>
+
+  <div class="filters">
+    <select id="locationFilter">
+      <option value="">Any Location</option>
+      <option value="Indoors">Indoors</option>
+      <option value="Outdoors">Outdoors</option>
+      <option value="At Home">At Home</option>
+      <option value="At Work">At Work</option>
+      <option value="On the Go">On the Go</option>
+    </select>
+
+    <select id="energyFilter">
+      <option value="">Any Energy</option>
+      <option value="Low Energy">Low Energy</option>
+      <option value="Medium Energy">Medium Energy</option>
+      <option value="High Energy">High Energy</option>
+    </select>
+
+    <select id="domainFilter">
+      <option value="">Any PEEMES Domain</option>
+      <option value="Physical">Physical</option>
+      <option value="Emotional">Emotional</option>
+      <option value="Environmental">Environmental</option>
+      <option value="Mental">Mental</option>
+      <option value="Existential">Existential</option>
+      <option value="Social">Social</option>
+    </select>
+
+    <button onclick="generateIdea()">🎯 New NEAT Idea</button>
+  </div>
+
+  <div id="result">Your NEAT idea will appear here.</div>
+  <div id="xpCounter">XP: 0</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
