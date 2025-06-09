@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEAT Randomizer</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="banner">
+    <p><strong>NEAT = Non-Exercise Activity Thermogenesis</strong><br>
+    These small, everyday movements help boost your metabolism, support fat loss, and improve energy—without hitting the gym. Little actions, big impact. Let's go!</p>
+  </div>
+
+  <div class="container">
+    <h1>🎲 NEAT Randomizer</h1>
+    <p>Select a category and get a fun activity to boost your daily movement!</p>
+    <div class="filters">
+      <select id="categorySelect">
+        <option value="Surprise">🎲 Surprise Me</option>
+        <option value="Indoor">🏠 Indoor</option>
+        <option value="Outdoor">🌳 Outdoor</option>
+      </select>
+      <button onclick="generateIdea()">Give Me a NEAT Idea</button>
+    </div>
+    <div id="ideaBox">Your NEAT idea will appear here.</div>
+    <div id="xpBar">XP: 0</div>
+    <div id="trophyBox"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
